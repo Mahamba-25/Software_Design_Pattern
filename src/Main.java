@@ -1,35 +1,37 @@
-// Main.java
-/**
- * Основной класс приложения для демонстрации работы кофейни.
- */
 public class Main {
     public static void main(String[] args) {
-        // Singleton: Получаем единственный экземпляр кофейни
-        CoffeeShop coffeeShop = CoffeeShop.getInstance();
+        DocumentFacade facade = new DocumentFacade();
 
-        // Factory Method: Создаем фабрику для эспрессо и производим кофе
-        CoffeeFactory espressoFactory = new EspressoFactory();
-        Coffee espresso = espressoFactory.createCoffee();
+        // 1. Использование Proxy для ленивой загрузки
+        System.out.println("1. Ленивая загрузка документов:");
+        facade.displayDocument("Report");
 
-        // Abstract Factory: Создаем фабрику для ингредиентов и получаем молоко и сироп
-        IngredientFactory ingredientFactory = new DefaultIngredientFactory();
-        Ingredient milk = ingredientFactory.createMilk();
-        Ingredient syrup = ingredientFactory.createSyrup();
+        // 2. Использование декоратора для добавления водяного знака
+        System.out.println("\n2. Добавление водяного знака:");
+        facade.displayDocumentWithWatermark("Report");
 
-        // Builder: Строим заказ кофе с выбранными ингредиентами
-        CoffeeOrderBuilder builder = new CoffeeOrderBuilder();
-        CoffeeOrder order = builder.setCoffee(espresso)
-                .setMilk(milk)
-                .setSyrup(syrup)
-                .build();
+        // 3. Использование Flyweight для повторного использования документа
+        System.out.println("\n3. Повторное использование документа:");
+        facade.displayDocument("Report");
 
-        // Prototype: Клонируем заказ для повторного использования
-        try {
-            CoffeeOrder orderClone = order.clone();
-            coffeeShop.takeOrder(order);
-            coffeeShop.takeOrder(orderClone);
-        } catch (CloneNotSupportedException e) {
-            e.printStackTrace();
-        }
+        // 4. Использование Composite для работы с группой документов
+        System.out.println("\n4. Работа с группами документов:");
+        DocumentGroup group = new DocumentGroup();
+        group.addDocument(DocumentFactory.getDocument("Report"));
+        group.addDocument(DocumentFactory.getDocument("Presentation"));
+        group.display();
+
+        // 5. Использование Adapter для работы с PDF
+        System.out.println("\n5. Работа с PDF документами через Adapter:");
+        Document pdfDocument = new PDFDocumentAdapter("document.pdf");
+        pdfDocument.display();
+
+        // 6. Использование Bridge для рендеринга
+        System.out.println("\n6. Рендеринг документа через движок:");
+        RenderEngine simpleEngine = new SimpleRenderEngine();
+        facade.renderDocument("Report", simpleEngine);
+
+        RenderEngine highlightEngine = new HighlightRenderEngine();
+        facade.renderDocument("Report", highlightEngine);
     }
 }
