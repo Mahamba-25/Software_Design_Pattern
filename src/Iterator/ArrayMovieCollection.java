@@ -1,7 +1,7 @@
 package Iterator;
 
 public class ArrayMovieCollection {
-    private String[] movies;
+    private final String[] movies;
     private int index = 0;
 
     public ArrayMovieCollection(int size) {

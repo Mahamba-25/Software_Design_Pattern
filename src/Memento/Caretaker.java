@@ -3,7 +3,7 @@ package Memento;
 import java.util.Stack;
 
 public class Caretaker {
-    private Stack<TextMemento> history = new Stack<>();
+    private final Stack<TextMemento> history = new Stack<>();
 
     public void save(TextEditor editor) {
         history.push(editor.save());

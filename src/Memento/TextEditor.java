@@ -16,6 +16,6 @@ public class TextEditor {
     }
 
     public void restore(TextMemento memento) {
-        text = new StringBuilder(memento.getText());
+        text = new StringBuilder(memento.text());
     }
 }

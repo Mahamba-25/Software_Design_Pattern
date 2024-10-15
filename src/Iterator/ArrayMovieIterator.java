@@ -1,7 +1,7 @@
 package Iterator;
 
 public class ArrayMovieIterator implements Iterator<String> {
-    private String[] movies;
+    private final String[] movies;
     private int position;
 
     public ArrayMovieIterator(String[] movies) {

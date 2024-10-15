@@ -1,7 +1,7 @@
 package Command;
 
 public class NextChannelCommand implements Command {
-    private Television tv;
+    private final Television tv;
 
     public NextChannelCommand(Television tv) {
         this.tv = tv;

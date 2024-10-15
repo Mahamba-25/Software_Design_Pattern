@@ -1,7 +1,7 @@
 package Command;
 
 public class VolumeDownCommand implements Command {
-    private Television tv;
+    private final Television tv;
 
     public VolumeDownCommand(Television tv) {
         this.tv = tv;

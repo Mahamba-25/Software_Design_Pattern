@@ -1,7 +1,7 @@
 package Command;
 
 public class TurnOffCommand implements Command {
-    private Television tv;
+    private final Television tv;
 
     public TurnOffCommand(Television tv) {
         this.tv = tv;

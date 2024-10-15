@@ -1,7 +1,7 @@
 package Mediator;
 
 public class HumiditySensor implements Sensor {
-    private HomeMediator mediator;
+    private final HomeMediator mediator;
 
     public HumiditySensor(HomeMediator mediator) {
         this.mediator = mediator;

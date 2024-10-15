@@ -1,7 +1,7 @@
 package Mediator;
 
 public class LightSensor implements Sensor {
-    private HomeMediator mediator;
+    private final HomeMediator mediator;
 
     public LightSensor(HomeMediator mediator) {
         this.mediator = mediator;

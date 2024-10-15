@@ -3,7 +3,7 @@ package Iterator;
 import java.util.List;
 
 public class ListMovieIterator implements Iterator<String> {
-    private List<String> movies;
+    private final List<String> movies;
     private int position;
 
     public ListMovieIterator(List<String> movies) {

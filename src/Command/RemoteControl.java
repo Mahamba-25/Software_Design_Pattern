@@ -1,7 +1,7 @@
 package Command;
 
 public class RemoteControl {
-    private Command[] buttons;
+    private final Command[] buttons;
 
     public RemoteControl() {
         buttons = new Command[6];
