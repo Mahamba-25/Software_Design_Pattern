@@ -1,3 +1,5 @@
+package Command;
+
 public class PreviousChannelCommand implements Command {
     private Television tv;
 

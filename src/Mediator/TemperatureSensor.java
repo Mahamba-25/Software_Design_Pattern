@@ -1,3 +1,5 @@
+package Mediator;
+
 public class TemperatureSensor implements Sensor {
     private HomeMediator mediator;
 

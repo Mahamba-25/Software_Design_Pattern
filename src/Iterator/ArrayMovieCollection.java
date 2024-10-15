@@ -1,3 +1,5 @@
+package Iterator;
+
 public class ArrayMovieCollection {
     private String[] movies;
     private int index = 0;

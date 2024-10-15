@@ -1,3 +1,5 @@
+package Mediator;
+
 public class LightSensor implements Sensor {
     private HomeMediator mediator;
 

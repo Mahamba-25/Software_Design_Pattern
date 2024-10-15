@@ -1,3 +1,5 @@
+package Memento;
+
 public class TextMemento {
     private final String text;
 

@@ -1,8 +1,10 @@
+package Mediator;
+
 import java.util.HashMap;
 import java.util.Map;
 
 public class HomeMediatorImpl implements HomeMediator {
-    private Map<String, String> sensorData = new HashMap<>();
+    private final Map<String, String> sensorData = new HashMap<>();
 
     @Override
     public void collectData(Sensor sensor, String data) {

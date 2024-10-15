@@ -1,3 +1,5 @@
+package Memento;
+
 public class TextEditor {
     private StringBuilder text = new StringBuilder();
 

@@ -1,3 +1,5 @@
+package Mediator;
+
 public class HumiditySensor implements Sensor {
     private HomeMediator mediator;
 

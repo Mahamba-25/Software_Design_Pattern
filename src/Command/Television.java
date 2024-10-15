@@ -1,3 +1,5 @@
+package Command;
+
 public class Television {
     public void turnOn() {
         System.out.println("Телевизор включен");

@@ -1,3 +1,5 @@
+package Chain;
+
 public class PaymentA extends PaymentHandler {
     private int balance = 100;
 

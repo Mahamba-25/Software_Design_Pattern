@@ -1,3 +1,5 @@
+package Iterator;
+
 public class ArrayMovieIterator implements Iterator<String> {
     private String[] movies;
     private int position;

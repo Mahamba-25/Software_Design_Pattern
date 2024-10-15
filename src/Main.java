@@ -1,3 +1,9 @@
+import Chain.*;
+import Command.*;
+import Iterator.*;
+import Mediator.*;
+import Memento.*;
+
 public class Main {
     public static void main(String[] args) {
         // Chain
@@ -5,7 +11,6 @@ public class Main {
         PaymentHandler paymentB = new PaymentB();
         PaymentHandler paymentC = new PaymentC();
 
-        // Установка цепочки
         paymentA.setNext(paymentB);
         paymentB.setNext(paymentC);
 
@@ -63,7 +68,7 @@ public class Main {
 
 
         // Mediator
-        HomeMediator mediator = new HomeMediatorImpl();
+        HomeMediatorImpl mediator = new HomeMediatorImpl();
 
         Sensor tempSensor = new TemperatureSensor(mediator);
         Sensor humiditySensor = new HumiditySensor(mediator);
@@ -75,7 +80,7 @@ public class Main {
         lightSensor.sendData();
 
         // Вывод отчета
-        ((HomeMediatorImpl) mediator).printReport();
+        mediator.printReport();
 
 
         // Memento

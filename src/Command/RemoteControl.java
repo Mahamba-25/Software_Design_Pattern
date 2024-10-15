@@ -1,3 +1,5 @@
+package Command;
+
 public class RemoteControl {
     private Command[] buttons;
 
