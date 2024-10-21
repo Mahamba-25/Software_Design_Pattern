@@ -1,5 +1,8 @@
 package State;
 
+/**
+ * Media player class that manages the current state and delegates actions to the state.
+ */
 public class Player {
     private PlayerState playingState;
     private PlayerState pausedState;

@@ -2,6 +2,10 @@ package Observer;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Concrete implementation of NewsPublisher.
+ * Manages a list of subscribers and notifies them when news is published.
+ */
 public class NewsPublisherImpl implements NewsPublisher {
     private List<Observer> subscribers = new ArrayList<>();
 

@@ -1,5 +1,8 @@
 package State;
 
+/**
+ * The player is in playing state, and it will handle user commands accordingly.
+ */
 public class PlayingState implements PlayerState {
     private Player player;
 

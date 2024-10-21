@@ -1,5 +1,8 @@
 package Visitor;
 
+/**
+ * Concrete class representing a text file.
+ */
 public class TextFile implements File {
     private String content;
 

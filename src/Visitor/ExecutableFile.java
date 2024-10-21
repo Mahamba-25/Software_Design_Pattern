@@ -1,5 +1,8 @@
 package Visitor;
 
+/**
+ * Concrete class representing an executable file.
+ */
 public class ExecutableFile implements File {
     private String name;
 

@@ -1,5 +1,8 @@
 package Visitor;
 
+/**
+ * Concrete visitor class for generating reports on files.
+ */
 public class ReportVisitor implements Visitor {
     @Override
     public void visit(TextFile textFile) {

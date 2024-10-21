@@ -1,5 +1,8 @@
 package State;
 
+/**
+ * The player is in stopped state, and it will handle user commands accordingly.
+ */
 public class StoppedState implements PlayerState {
     private Player player;
 

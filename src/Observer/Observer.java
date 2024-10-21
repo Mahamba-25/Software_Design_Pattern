@@ -1,7 +1,8 @@
 package Observer;
 
 /**
- * Observer interface, which defines the update method for subscribers.
+ * Observer interface for the Observer pattern.
+ * This defines the method for subscribers to get updates when news is published.
  */
 public interface Observer {
     void update(String newsCategory, String news);
