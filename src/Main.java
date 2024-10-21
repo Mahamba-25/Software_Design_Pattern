@@ -12,15 +12,12 @@ public class Main {
 
         // Observer
         NewsPublisherImpl publisher = new NewsPublisherImpl();
-
         Observer smartphone = new NewsSubscriberSmartphone();
         Observer laptop = new NewsSubscriberLaptop();
         Observer tablet = new NewsSubscriberTablet();
-
         publisher.subscribe(smartphone);
         publisher.subscribe(laptop);
         publisher.subscribe(tablet);
-
         publisher.publishNews("Sport", "Team Spirit wins The International 2021!");
         publisher.publishNews("Science", "New images of blackhole has been shot!");
 
